@@ -81,17 +81,6 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div className="lg:flex-row lg:h-1/2  flex flex-col h-full w-full m-4">
-        <div className="w-full h-5/6 p-4">
-          <img
-            src={`Images/youtubeCopy.png`}
-            alt="youtube copy"
-            className={`w-full h-full shadow-2xl rounded-lg ${
-              inView ? "animate-fadeInSlow" : null
-            }`}
-          ></img>
-        </div>
-      </div>
     </div>
   );
 };
