@@ -1,7 +1,7 @@
 import React from "react";
 
 import Email from "./iconComponents/email";
-import { Projects, AboutMe, Skills } from "./iconComponents/technologies";
+import { Projects, Skills } from "./iconComponents/technologies";
 
 const Header = () => {
   const handleClick = data => {
@@ -18,12 +18,6 @@ const Header = () => {
               className="bg-white rounded-full h-10 w-10 cursor-pointer transform transition ease-in hover:scale-125"
             >
               <Projects />
-            </div>
-            <div
-              onClick={() => handleClick(`AboutMe`)}
-              className="bg-white rounded-full h-10 w-10 cursor-pointer transform transition ease-in hover:scale-125"
-            >
-              <AboutMe />
             </div>
             <div
               onClick={() => handleClick(`Skills`)}

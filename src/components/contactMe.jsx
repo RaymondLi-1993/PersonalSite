@@ -86,14 +86,27 @@ const ContactMe = () => {
         )}
         <div className="mb-16 w-1/2 flex flex-row h-12 items-center justify-center">
           <div className="bg-white rounded-full h-10 w-10 cursor-pointer m-2 transform transition ease-in hover:scale-125">
-            <a href="https://www.linkedin.com/in/raymond-li-460073193">
+            <button
+              onClick={() => {
+                window.open(
+                  "https://www.linkedin.com/in/raymond-li-460073193",
+                  "_blank"
+                );
+              }}
+              style={{ outline: `none` }}
+            >
               <LinkedIn />
-            </a>
+            </button>
           </div>
           <div className="bg-white rounded-full h-10 w-10 cursor-pointer m-2 transform transition ease-in hover:scale-125">
-            <a href="https://github.com/RaymondLi-1993">
+            <button
+              onClick={() => {
+                window.open("https://github.com/RaymondLi-1993", "_blank");
+              }}
+              style={{ outline: `none` }}
+            >
               <GitHub />
-            </a>
+            </button>
           </div>
           <div className="bg-white rounded-full h-10 w-10 cursor-pointer m-2 transform transition ease-in hover:scale-125">
             <a href="#">

@@ -2,7 +2,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 
 const Projects = () => {
-  const { ref, inView, entry } = useInView({});
+  const { ref, inView } = useInView({});
 
   return (
     <div
@@ -12,6 +12,57 @@ const Projects = () => {
     >
       <div className="w-screen h-16 text-center text-5xl font-mono font-extrabold p-4 pt-2 text-blue-900">
         Projects
+      </div>
+      <div className="lg:flex-row lg:h-1/2  flex flex-col h-full w-full m-4">
+        <div className="w-full h-5/6 p-4">
+          <img
+            src={`Images/youtubeCopy.png`}
+            alt="youtube copy"
+            className={`w-full h-full shadow-2xl rounded-lg ${
+              inView ? "animate-fadeInSlow" : null
+            }`}
+          ></img>
+        </div>
+        <div className="h-full w-full p-6">
+          <h1 className="p-2 font-openSans mb-2 font-bold text-2xl text-center">
+            Youtube Clone.
+          </h1>
+          <p className="container justify-center p-4 w-full font-Nunito font-light text-xl">
+            Youtube copy was a fun project mimicing the popular website youtube.
+            This project consisted of using data from the youtube API and allows
+            the user to sign up, post comments, and search for videos. The front
+            end is built on react with redux to manage application state. The
+            backend consists of postgresql to store user accounts and comments
+            combined with passport to persist and authorize returning/new users.
+            The application also makes use of Bcrypt to help further secure
+            users accounts.
+          </p>
+          <div className="w-full flex container px-2">
+            <button
+              className="border-red-500 h-full border-2 w-16 text-center mx-2 font-bold font-mono cursor-pointer"
+              onClick={() => {
+                window.open(
+                  "https://you-tv-app.herokuapp.com/videos",
+                  "_blank"
+                );
+              }}
+            >
+              Live
+            </button>
+
+            <button
+              className="border-red-500 h-full border-2 w-32 text-center mx-2 font-bold font-mono cursor-pointer"
+              onClick={() => {
+                window.open(
+                  "https://github.com/RaymondLi-1993/youtubeClone",
+                  "_blank"
+                );
+              }}
+            >
+              Source Code
+            </button>
+          </div>
+        </div>
       </div>
       <div className="lg:flex-row lg:h-1/2  flex flex-col h-full w-full m-4">
         <div className="w-full h-full p-8">
@@ -38,46 +89,26 @@ const Projects = () => {
             session-cookies.
           </p>
           <div className="w-full flex container px-2">
-            <div className="border-red-500 h-full border-2 w-16 text-center mx-2 font-bold font-mono cursor-pointer">
-              <a href="https://flare-clothing.herokuapp.com/">Live</a>
-            </div>
-            <div className="border-red-500 h-full border-2 w-32 text-center mx-2 font-bold font-mono cursor-pointer">
-              <a href="https://github.com/RaymondLi-1993/flare-clothing">
-                Source Code
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="lg:flex-row lg:h-1/2  flex flex-col h-full w-full m-4">
-        <div className="w-full h-5/6 p-4">
-          <img
-            src={`Images/youtubeCopy.png`}
-            alt="youtube copy"
-            className={`w-full h-full shadow-2xl rounded-lg ${
-              inView ? "animate-fadeInSlow" : null
-            }`}
-          ></img>
-        </div>
-        <div className="h-full w-full p-6">
-          <h1 className="p-2 font-openSans mb-2 font-bold text-2xl text-center">
-            Youtube Copy
-          </h1>
-          <p className="container justify-center p-4 w-full font-Nunito font-light text-xl">
-            Youtube copy was a fun project mimicing the popular website youtube.
-            This project consisted of using data from the youtube API and allows
-            the user to search for videos like the real youtube website. The
-            website was built with react/react Hooks and fetches data via Axios.
-          </p>
-          <div className="w-full flex container px-2">
-            <div className="border-red-500 h-full border-2 w-16 text-center mx-2 font-bold font-mono cursor-pointer">
-              <a href="https://epic-colden-4b825c.netlify.app/">Live</a>
-            </div>
-            <div className="border-red-500 h-full border-2 w-32 text-center mx-2 font-bold font-mono cursor-pointer">
-              <a href="https://github.com/RaymondLi-1993/video-search">
-                Source Code
-              </a>
-            </div>
+            <button
+              className="border-red-500 h-full border-2 w-16 text-center mx-2 font-bold font-mono cursor-pointer"
+              onClick={() => {
+                window.open("https://flare-clothing.herokuapp.com/", "_blank");
+              }}
+            >
+              Live
+            </button>
+
+            <button
+              className="border-red-500 h-full border-2 w-32 text-center mx-2 font-bold font-mono cursor-pointer"
+              onClick={() => {
+                window.open(
+                  "https://github.com/RaymondLi-1993/flare-clothing",
+                  "_blank"
+                );
+              }}
+            >
+              Source Code
+            </button>
           </div>
         </div>
       </div>
