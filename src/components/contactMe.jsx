@@ -88,10 +88,7 @@ const ContactMe = () => {
           <div className="bg-white rounded-full h-10 w-10 cursor-pointer m-2 transform transition ease-in hover:scale-125">
             <button
               onClick={() => {
-                window.open(
-                  "https://www.linkedin.com/in/raymond-li-460073193",
-                  "_blank"
-                );
+                window.open("linkedin.com/in/raymondli1993", "_blank");
               }}
               style={{ outline: `none` }}
             >
